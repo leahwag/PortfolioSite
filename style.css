@@ -7,8 +7,7 @@ html, body{
     background-color: #F7E0DA;
     color: #5E4039;
     font-family: 'Kanit', sans-serif;
-
-}
+  }
 
 
 #index-body{
@@ -16,13 +15,13 @@ html, body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
+  }
 
 /* removing underline from all anchor tags */
 a{
     text-decoration: none;
     color: #5E4039;
-}
+  }
 
 a:hover{
   cursor: pointer;
@@ -32,10 +31,10 @@ a:hover{
 ul{
     list-style: none;
     padding: 0;
-}
+  }
 
 /* hamburger button */
-label{
+.menu-label{
     background-image: url("menu-outline.svg");
     background-size: 100px;
     background-repeat: no-repeat;
@@ -44,23 +43,23 @@ label{
     cursor: pointer;
     height: 120px;
     margin-right: 10px;
-    }
+  }
 
-    input:checked ~ label{
-        background-image: url("close-outline.svg");
-        background-size: 100px;
-        background-repeat: no-repeat;
-        background-position: top right;
-        display: block;
-        cursor: pointer;
-        height: 120px;
-        margin-right: 10px;
-    }
+input#menu:checked ~ .menu-label{
+  background-image: url("close-outline.svg");
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  display: block;
+  cursor: pointer;
+  height: 120px;
+  margin-right: 10px;
+}
 
 /* makes checkbox disappear */
 input#menu{
     display: none;
-}
+  }
 
 /* hamburger nav stuff */
 .nav-and-socials{
@@ -68,9 +67,9 @@ input#menu{
         border-top: #5E4039 5px solid;
         border-bottom:#5E4039 5px solid;
         margin: 65px 0 50px 0;
-    }
+      }
 
-    .nav-and-socials a:hover{
+.nav-and-socials a:hover{
       opacity: 60%;
     }
 
@@ -86,21 +85,21 @@ input#menu{
 
     .nav-and-socials ion-icon{
         padding: 0px 15px 0px 15px;
-        font-size: 50pt;
+        font-size: 35pt;
     }
 
     .socials{
       padding-bottom: 20px;
     }
 
-    input:checked ~ .nav-and-socials{
+    input#menu:checked ~ .nav-and-socials{
         display: block;
         text-align: center;
-        font-size: 2.4em;
+        font-size: 1.5em;
         font-weight: 800;
       }
 
-      input:checked ~ .headername{
+      input#menu:checked ~ .headername{
         display: none;
       }
 
@@ -114,7 +113,8 @@ input#menu{
 
       header{
         width: 100%;
-        padding-bottom: 30px;
+        padding-bottom: 40px;
+        margin-bottom: 20px;
       }
 
       #index-name{
@@ -162,9 +162,16 @@ input#menu{
         font-size: 1.5em;
       }
 
+      /* centers work pictures */
+      #one-work div{
+        text-align: center;
+      }
+
       .works img{
         clear: left;
         width: 90%;
+        margin: auto;
+        text-align: center;
       }
 
       .about h1{
@@ -213,6 +220,57 @@ input#menu{
 
 
 
+      /* work filters: */
+
+/* makes things disappear when their button isn't clicked*/
+.filterDiv {
+  display: none;
+}
+
+/* makes things appear when their button is clicked */
+.show {
+  display: block;
+}
+
+.btn{
+  border: none;
+  outline: none;
+  padding: 1% 2% 1% 2%;
+  margin: 2%;
+  background-color: #DE9785;
+  color: #5E4039;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.btn:hover{
+  background-color: #A36F62;
+  color: #F7E0DA;
+}
+
+.btn.active{
+  background-color: #5E4039;
+  color: #F7E0DA;
+}
+
+#btnContainer{
+  text-align: center;
+  width: 100%;
+  margin: 5% 0% 15% 0%;
+}
+
+#btnContainer button{
+  display: block;
+  width: 80%;
+  text-align: center;
+  margin: 1.5% auto 2.5% auto;
+}
+
+
+
+
 
 /*  */
 /*  */
@@ -225,6 +283,10 @@ input#menu{
 /*  */
 /*  */
 
+/* fixing issues with heading positioning at weird middle size */
+@media screen and (min-width:1024px) and (max-width:1416px){
+
+}
 
 
 
@@ -266,7 +328,7 @@ input#menu{
     display: none;
 }
 
-label{
+.menu-label{
     display: none;
 }
 
@@ -383,8 +445,13 @@ label{
 }
 
 #others-main{
-    /* height: 50%; */
     clear: both;
+}
+
+.works label{
+  display: inline-block;
+  padding: 3px 20px 3px 20px;
+  /* margin-left: 40px; */
 }
 
 .works{
@@ -414,7 +481,7 @@ label{
   #one-work div{
     width: 54%;
     float: left;
-    padding-bottom: 20%;
+    padding-bottom: 15%;
   }
 
   .about{
@@ -471,6 +538,22 @@ label{
 
 footer{
   clear: both;
+}
+
+
+/* work filters: */
+
+#btnContainer{
+  text-align: center;
+  width: 100%;
+  margin: 2% 0% 2% 0%;
+}
+
+#btnContainer button{
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  margin: 1.5% 1% 2.5% 1%;
 }
 
 }

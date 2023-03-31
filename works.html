@@ -25,8 +25,8 @@
             <h3>Athens, Ohio</h3>
         </div>
 
-        <input type="checkbox" id="menu" class="mobile-menu">
-        <label for="menu"></label>
+        <input type="checkbox" id="menu">
+        <label class="menu-label" for="menu"></label>
 
         <section class="nav-and-socials">
         <section class="nav">
@@ -45,39 +45,54 @@
     </section>
     </header>
 
-    <main class="works" id="others-main" id="all-works">
-        
-                <div id="one-work" class="work-gd">
-            <div> <img src="WorksPictures/dust-jacket.jpeg"> </div>
-            <p>
-                <b>Dust Jacket Design</b>
-                <br>March 2023
-                <br>
-                <br>Made with InDesign & Illustrator
-                <br>Class: Graphic Design Studio II
+
+    <main class="works" id="others-main">
+        <!-- !!code for filter buttons is not my original creation!! -->
+        <!-- it was derived from W3 schools: -->
+        <!-- https://www.w3schools.com/howto/howto_js_filter_elements.asp -->
+
+        <div id="btnContainer">
+            <button class="btn active" onclick="filterSelection('all')">All</button>
+            <button class="btn" onclick="filterSelection('gd')">Graphic Design</button>
+            <button class="btn" onclick="filterSelection('wd')">Web Design</button>
+            <button class="btn" onclick="filterSelection('ani')">Animation</button>
+            <button class="btn" onclick="filterSelection('prints')">Prints</button>
+            <button class="btn" onclick="filterSelection('other')">Other</button>
+        </div>
+
+        <div class="worksContainer">
+
+            <div id="one-work" class="filterDiv gd">
+                <div> <img src="WorksPictures/dust-jacket.jpeg"> </div>
+                <p>
+                    <b>Dust Jacket Design</b>
+                    <br>March 2023
+                    <br>
+                    <br>Made with InDesign & Illustrator
+                    <br>Class: Graphic Design Studio II
                 
-                <br><br>For this assignment, my professor had us make inkblots on paper. We then had to design a dust jacket for a murder mystery book 
+                    <br><br>For this assignment, my professor had us make inkblots on paper. We then had to design a dust jacket for a murder mystery book 
                 and use our inkblot somewhere in the design. I ended up making one that resembled a diamond, which matched the book that I chose perfectly.
-            <br><br>
-            </p>
-        </div>
+                <br><br>
+                </p>
+            </div>
 
-        <div id="one-work" class="work-gd">
-            <div> <img src="WorksPictures/Shirt-Mockups-Tree.png"> <img src="WorksPictures/Shirt-Mockups-Boot.png"> <img src="WorksPictures/Shirt-Mockups-Sign.png"> </div>
-            <p>
-                <b>Bobcat Store Shirt Design</b>
-                <br>February 2023
-                <br>
-                <br>Made with Illustrator, Photoshop, and Procreate
-                <br>Class: Graphic Design Studio II
+            <div id="one-work" class="filterDiv gd">
+                <div> <img src="WorksPictures/shirt-mockups-tree.png"> <img src="WorksPictures/Shirt-Mockups-Boot.png"> <img src="WorksPictures/Shirt-Mockups-Sign.png"> </div>
+                <p>
+                    <b>Bobcat Store Shirt Design</b>
+                    <br>February 2023
+                    <br>
+                    <br>Made with Illustrator, Photoshop, and Procreate
+                    <br>Class: Graphic Design Studio II
                 
-                <br><br>The OU Bobcat Store asked the graphic design students to enter t-shirt designs for a contest so my professor made an assignment out of it.
+                    <br><br>The OU Bobcat Store asked the graphic design students to enter t-shirt designs for a contest so my professor made an assignment out of it.
                 They were vague on the requirements, and said that it could be related to Athens,Ohio and not just Ohio Univeristy.
-                <br><br>*photos of the t-shirts & backgrounds are not mine, only the designs*
-            </p>
-        </div>
+                    <br><br>*photos of the t-shirts & backgrounds are not mine, only the designs*
+                </p>
+            </div>
 
-            <div id="one-work">
+            <div id="one-work" class="filterDiv gd">
                 <div> <img src="WorksPictures/muriel-infographic.png"> </div>
                 <p>
                     <b>Muriel Cooper Infographic</b>
@@ -90,10 +105,9 @@
                     I chose to use bold, all caps Helvetica as a nod to Cooper's style. With Photoshop, I created her name in the same style 
                     as one of her Bauhaus cover designs.
                 </p>
-
             </div>
 
-            <div id="one-work">
+            <div id="one-work" class="filterDiv gd prints">
                 <div> <img src="WorksPictures/blue-minds.jpeg"> </div>
                 <p>
                     <b><i>Blue Minds</i></b>
@@ -107,7 +121,7 @@
                 </p>
             </div>
 
-            <div id="one-work">
+            <div id="one-work" class="filterDiv prints">
                 <div> <img src="WorksPictures/basement-litho.jpg"> </div>
                 <p>
                     <b><i>Bernie's Basement</i></b>
@@ -120,7 +134,7 @@
                 </p>
             </div>
 
-            <div id="one-work">
+            <div id="one-work" class="filterDiv prints">
                 <div> <img src="WorksPictures/butterfly-litho.jpeg"> </div>
                 <p>
                     <b><i>Flown Away</i></b>
@@ -134,7 +148,7 @@
                 </p>
              </div>
 
-            <div id="one-work">
+            <div id="one-work" class="filterDiv wd">
                 <div> <a href="https://project3.leahwag.repl.co/"> <img src="WorksPictures/bluetip-site.png"> </a> </div>
                 <p>
                     <b>Event Website Creation/Recreation</b>
@@ -147,7 +161,7 @@
                 </p>
             </div>
 
-            <div id="one-work">
+            <div id="one-work" class="filterDiv prints">
                 <div> <img src="WorksPictures/yuh-litho.jpeg"> </div>
                 <p>
                     <b><i>Yuh</i></b>
@@ -160,7 +174,7 @@
                 </p>
             </div>
             
-            <div id="one-work">
+            <div id="one-work" class="filterDiv wd">
                 <div> <a href="https://project2.leahwag.repl.co/"> <img src="WorksPictures/coachella-site.png"> </a> </div>
                 <p>
                     <b>Coachella Website Recreation</b>
@@ -174,7 +188,7 @@
                 </p>
             </div>
 
-            <div id="one-work">
+            <div id="one-work" class="filterDiv gd ani">
                 <div> <img src="WorksPictures/data-vis-gif.gif"> </div>
                 <p>
                     <b>Data Visualization Gif</b>
@@ -188,7 +202,7 @@
                 </p>
             </div>
 
-            <div id="one-work">
+            <div id="one-work" class="filterDiv gd">
                 <div> <img src="WorksPictures/data-vis-still.jpg"> <img src="WorksPictures/data-vis-key.jpg"> </div>
                 <p>
                     <b>Data Visualization Project (with key)</b>
@@ -202,7 +216,7 @@
                 </p>
              </div>
 
-            <div id="one-work">
+            <div id="one-work" class="filterDiv gd ani">
                 <div> <img src="WorksPictures/nature-gif.gif"> </div>
                 <p>
                     <b>"Nature" Gif</b>
@@ -215,7 +229,7 @@
                 </p>
             </div>
 
-            <div id="one-work">
+            <div id="one-work" class="filterDiv gd">
                 <div> <img src="WorksPictures/headings-page.jpg"> <img src="WorksPictures/headings-info.jpg"> </div>
                 <p>
                     <b>A Study of Headings</b>
@@ -229,7 +243,7 @@
                 </p>
             </div>
 
-            <div id="one-work">
+            <div id="one-work" class="filterDiv gd">
                 <div> <img src="WorksPictures/book-page-before.jpg"> <img src="WorksPictures/book-page-after.jpg"> </div>
                 <p>
                     <b>Book Page Repair</b>
@@ -242,7 +256,7 @@
                 </p>
             </div>
 
-            <div id="one-work">
+            <div id="one-work" class="filterDiv gd">
                 <div> <img src="WorksPictures/linear-alphabet.jpg"> <img src="WorksPictures/linear-pangram.jpg"> </div>
                 <p>
                     <b><i>Linear</i></b>
@@ -257,7 +271,7 @@
                 </p>
             </div>
 
-            <div id="one-work">
+            <div id="one-work" class="filterDiv other">
                 <div> <img src="WorksPictures/monochrome-painting.jpg"> </div>
                 <p>
                     <b>Blue Monochrome Painting</b>
@@ -272,7 +286,7 @@
                 </p>
             </div>
 
-            <div id="one-work">
+            <div id="one-work" class="filterDiv prints">
                 <div> <img src="WorksPictures/house-cyanotype.jpg"> </div>
                 <p>
                     <b>Line Drawing Cyanotype</b>
@@ -284,7 +298,7 @@
                 </p>
             </div>
 
-            <div id="one-work">
+            <div id="one-work" class="filterDiv other">
                 <div> <img src="WorksPictures/tooth-statue.jpeg"> </div>
                 <p>
                     <b>Sweet Tooth</b>
@@ -299,6 +313,7 @@
                 </p>
             </div>
             
+        </div>
     </main>
 
     <footer>
@@ -312,5 +327,7 @@
         </div>
     </footer>
     
+    <script src="filters.js" ></script>
+
 </body>
 </html>

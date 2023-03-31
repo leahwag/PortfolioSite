@@ -217,6 +217,19 @@ input#menu{
         color: #F7E0DA;
       }
 
+      .backtotop{
+        position: fixed;
+        padding: 0px 5px 0px 5px;
+        top: 90%;
+        left: 85%;
+        z-index: 1;
+        border: #5E4039 solid 2px;
+        color: #5E4039;
+        background-color: #DE9785;
+        text-align: center;
+        font-size: 18pt;
+      }
+
 
 
 
@@ -538,6 +551,11 @@ input#menu{
 
 footer{
   clear: both;
+}
+
+.backtotop{
+  top: 90%;
+  left: 95%;
 }
 
 
